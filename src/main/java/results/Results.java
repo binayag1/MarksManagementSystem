@@ -8,11 +8,11 @@ import results.view.ResultsView;
 public class Results {
 	
 	public static void main(String args[]) {
-		ResultQueries rs=new ResultQueries();
+		ResultQueries rq=new ResultQueries();
 		ResultsView rv=new ResultsView();
-		ResultPresenter rp=new ResultPresenter();
+		ResultPresenter rp=new ResultPresenter(rv,rq);
+		rv.bind(rp);
 		rv.setVisible(true);
-		
 	}
 
 }
